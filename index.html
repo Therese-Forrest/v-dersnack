@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VäderSnack</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="top">
+        <h1>VäderSnack</h1>
+        <p class="tag">Väder, snack och socialt flow.</p>
+      </header>
+
+      <button class="retro-btn" id="location-btn">Use my location</button>
+      <p class="debug-line" id="location-debug">
+        Using: lat --, lon -- (not set)
+      </p>
+
+      <section class="card receipt" aria-label="Weather Receipt">
+        <h2>Weather Receipt</h2>
+        <div class="row">
+          <span>Temp now</span>
+          <strong id="temp-now">-- degC</strong>
+        </div>
+        <div class="row">
+          <span>Yesterday same hour</span>
+          <strong id="temp-yesterday">-- degC</strong>
+        </div>
+        <div class="row">
+          <span>Δ vs yesterday</span>
+          <strong id="temp-delta">-- degC</strong>
+        </div>
+        <div class="row">
+          <span>Wind</span>
+          <strong id="wind-now">-- m/s</strong>
+        </div>
+        <div class="row">
+          <span>Rain chance</span>
+          <strong id="rain-now">-- %</strong>
+        </div>
+        <div class="row">
+          <span>Summary</span>
+          <strong id="weather-summary">Placeholder summary text</strong>
+        </div>
+      </section>
+
+      <section class="icebreakers" aria-label="3 Icebreakers">
+        <h2>3 Icebreakers</h2>
+        <div class="ice-grid">
+          <article class="card ice-card" id="ice-card-1">
+            <h3>Icebreaker 1</h3>
+            <p><strong>Say:</strong> Placeholder line.</p>
+            <p><strong>Ask:</strong> Placeholder question?</p>
+            <p><strong>Twist:</strong> Placeholder tag.</p>
+          </article>
+          <article class="card ice-card" id="ice-card-2">
+            <h3>Icebreaker 2</h3>
+            <p><strong>Say:</strong> Placeholder line.</p>
+            <p><strong>Ask:</strong> Placeholder question?</p>
+            <p><strong>Twist:</strong> Placeholder tag.</p>
+          </article>
+          <article class="card ice-card" id="ice-card-3">
+            <h3>Icebreaker 3</h3>
+            <p><strong>Say:</strong> Placeholder line.</p>
+            <p><strong>Ask:</strong> Placeholder question?</p>
+            <p><strong>Twist:</strong> Placeholder tag.</p>
+          </article>
+        </div>
+      </section>
+
+      <div class="actions">
+        <button class="retro-btn" id="regen-btn">Regenerate icebreakers</button>
+        <button class="retro-btn" id="copy-link-btn">Copy share link</button>
+      </div>
+    </main>
+    <p class="toast" id="copy-toast" role="status" aria-live="polite">Link copied!</p>
+
+    <script src="app.js"></script>
+  </body>
+</html>
